@@ -255,6 +255,7 @@ footer {
   align-items: center;
   position: sticky;
   top: 0;
+  padding: 20px 25px;
 }
 
 .nav > div {
@@ -262,10 +263,16 @@ footer {
   justify-content: start;
   align-items: center;
   gap: 10px;
-  padding: 0px 25px;
 }
 
-.nav-left > .home {
+.nav-left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-left > .home-logo {
   display: none;
 }
 
@@ -284,7 +291,7 @@ footer {
   cursor: pointer;
 }
 
-.nav-right > button {
+.nav-right > .buttons > button {
   color: #b3b3b3;
   font-weight: 600;
   width: 110px;
@@ -299,20 +306,31 @@ footer {
   cursor: pointer;
 }
 
-.nav-right > button:hover {
+.buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right > .buttons > button:hover {
   color: black;
   font-size: 16.2px;
   font-weight: 700;
   transform: scale(1.05);
 }
 
-.nav-right :first-child {
+.nav-right > .buttons :first-child {
   background-color: transparent;
   color: #909090;
 }
 
-.nav-right :first-child:hover {
+.nav-right > .buttons :first-child:hover {
   color: white;
+}
+
+.nav-right> .hamburger{
+  display: none;
 }
 
 .main {
@@ -670,6 +688,8 @@ footer > .upper {
 @media screen and (max-width: 750px) {
   .left {
     left: -100%;
+    z-index: 10;
+    width: 60%;
   }
   .right {
     height: 100%;
@@ -679,25 +699,33 @@ footer > .upper {
   .nav-left > .navigation {
     display: none;
   }
-  .nav-left > .home {
+  .nav-left > .home-logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 50px;
   }
-  .nav-left > .home img {
-    width: 100px;
-    height: 100px;
-  }
-  .nav-left > .home :last-child > img {
-    width: 20px;
+  .nav-left > .home-logo img {
+    width: 150px;
+    height: 150px;
   }
   .right {
     padding: 0px;
   }
   .nav {
-    padding: 40px 0px;
+    padding: 40px 25px;
+  }
+  .nav-right>.buttons{
+    display: none;
+  
+  }
+  .nav-right>.hamburger{
+    display: block;
+  }
+  .nav-right>.hamburger>img{
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -712,6 +740,15 @@ footer > .upper {
     width: 100%;
     height: 100%;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-logo > .search {
+    display: none;
+  }
+  .nav-right > .buttons {
+    display: none;
   }
 }
 
