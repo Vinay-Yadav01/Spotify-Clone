@@ -265,14 +265,18 @@ footer {
   padding: 0px 25px;
 }
 
-.nav-left {
+.nav-left > .home {
+  display: none;
+}
+
+.nav-left > div {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 20px;
 }
 
-.nav-left img {
+.navigation img {
   width: 28px;
   height: 28px;
   padding: 6px;
@@ -496,7 +500,6 @@ footer > .upper {
   gap: 100px;
 }
 
-
 .links > div {
   display: flex;
   flex-direction: column;
@@ -651,13 +654,6 @@ footer > .upper {
 }
 
 @media (max-width: 800px) {
-  .left {
-    left: -100%;
-  }
-  .right {
-    height: 100%;
-    width: 100%;
-  }
   .main > section {
     height: 30%;
     margin-bottom: 70px;
@@ -671,11 +667,45 @@ footer > .upper {
   }
 }
 
+@media screen and (max-width: 750px) {
+  .left {
+    left: -100%;
+  }
+  .right {
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav-left > .navigation {
+    display: none;
+  }
+  .nav-left > .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .nav-left > .home img {
+    width: 100px;
+    height: 100px;
+  }
+  .nav-left > .home :last-child > img {
+    width: 20px;
+  }
+  .right {
+    padding: 0px;
+  }
+  .nav {
+    padding: 40px 0px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  .card:nth-last-child(11){
+  .card:nth-last-child(11) {
     display: none;
   }
   .main > footer {
@@ -689,7 +719,7 @@ footer > .upper {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .card:nth-last-child(12){
+  .card:nth-last-child(12) {
     display: none;
   }
 }
