@@ -11,3 +11,9 @@ hamburger.addEventListener("click", () => {
         flag = true;
     }
 });
+
+const close = document.querySelector(".close");
+close.addEventListener("click", () => {
+  left.style.left = "-100%";
+  flag = true;
+});
