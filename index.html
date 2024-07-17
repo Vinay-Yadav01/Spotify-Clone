@@ -24,7 +24,14 @@
                 alt="image"
               />
             </a>
-            <div class="close"><img class="invert" src="assests/svgs/close.svg" width="30" alt=""></div>
+            <div class="close">
+              <img
+                class="invert"
+                src="assests/svgs/close.svg"
+                width="30"
+                alt=""
+              />
+            </div>
           </div>
           <div class="icon">
             <img class="invert svg" src="assests/svgs/home.svg" alt="" />
@@ -1156,24 +1163,50 @@
     </div>
     <div class="playbar">
       <div class="playbar-info">
-        <img src="assests/images/Popular Albums/1.jpeg" alt="" width="50">
+        <img src="assests/images/Popular Albums/1.jpeg" alt="" width="55" />
         <div class="info">
           <h5>Name</h5>
           <h5>Artist</h5>
         </div>
-        <img class="invert" src="assests/svgs/plus.svg" alt="">
+        <img class="invert" src="assests/svgs/plus.svg" alt="" />
       </div>
       <div class="playbar-controls">
-        <button>
-          <img class="invert"  src="assests/svgs/previous.svg" alt="" />
-        </button>
-        <button>
-          <img class="invert" src="assests/svgs/play.svg" alt="" />
-        </button>
-        <button>
-          <img class="invert" src="assests/svgs/next.svg" alt="" />
-        </button>
-        <div class="playbar-icon"></div>
+        <div class="playbar-buttons">
+          <img class="invert" src="assests/svgs/shuffle.svg" alt="" />
+          <button>
+            <img class="invert" src="assests/svgs/previous.svg" alt="" />
+          </button>
+          <button>
+            <img id="play" src="assests/svgs/play.svg" alt="" />
+            <img
+              class="invert"
+              id="pause"
+              src="assests/svgs/pause.svg"
+              alt=""
+            />
+          </button>
+          <button>
+            <img class="invert" src="assests/svgs/next.svg" alt="" />
+          </button>
+          <img class="invert" src="assests/svgs/repeat.svg" alt="" />
+        </div>
+
+        <div class="playbar-seek">
+          <input type="range" id="seek-slider" min="0" max="100" />
+        </div>
+      </div>
+      <div class="playbar-icon">
+        <img class="invert" src="assests/svgs/playlist.svg" alt="" />
+        <img class="invert" src="assests/svgs/mic.svg" alt="" />
+        <img class="invert" src="assests/svgs/control-queue.svg" alt="" />
+        <img class="invert" src="assests/svgs/connect.svg" alt="" />
+        <div class="audio-player">
+          <img class="invert" src="assests/svgs/sound.svg" alt="" />
+
+          <input type="range" orient="vertical" id="volume-slider" min="0" max="100" />
+        </div>
+        <img class="invert" src="assests/svgs/miniplayer.svg" alt="" />
+        <img class="invert" src="assests/svgs/expand.svg" alt="" />
       </div>
     </div>
     <script src="script.js"></script>
