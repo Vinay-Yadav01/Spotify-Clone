@@ -51,15 +51,20 @@
             <img class="invert" src="assests/svgs/add.svg" alt="" />
           </div>
           <div class="library-bottom">
-            <div class="playlist">
-              <h4>Create your first playlist</h4>
-              <h5>It’s easy, we’ll help you</h5>
-              <button>Create playlist</button>
+            <div class="songs">
+              <ul></ul>
             </div>
-            <div class="playlist">
-              <h4>Let’s find some podcasts to follow</h4>
-              <h5>We’ll keep you updated on new episodes</h5>
-              <button>Browse podcasts</button>
+            <div class="playlists">
+              <div class="playlist">
+                <h4>Create your first playlist</h4>
+                <h5>It’s easy, we’ll help you</h5>
+                <button>Create playlist</button>
+              </div>
+              <div class="playlist">
+                <h4>Let’s find some podcasts to follow</h4>
+                <h5>We’ll keep you updated on new episodes</h5>
+                <button>Browse podcasts</button>
+              </div>
             </div>
           </div>
           <footer>
@@ -71,10 +76,6 @@
               <a href="">About Ads</a>
               <a href="">Accessibility</a>
               <a href="">Cookies</a>
-            </div>
-            <div class="lang">
-              <img class="invert" src="assests/svgs/globe.svg" alt="" />
-              <span>English</span>
             </div>
           </footer>
         </div>
@@ -1165,7 +1166,7 @@
       <div class="playbar-info">
         <img src="assests/images/Popular Albums/1.jpeg" alt="" width="55" />
         <div class="info">
-          <h5>Name</h5>
+          <h5 class="song-info">Name</h5>
           <h5>Artist</h5>
         </div>
         <img class="invert" src="assests/svgs/plus.svg" alt="" />
@@ -1174,19 +1175,18 @@
         <div class="playbar-buttons">
           <img class="invert" src="assests/svgs/shuffle.svg" alt="" />
           <button>
-            <img class="invert" src="assests/svgs/previous.svg" alt="" />
-          </button>
-          <button>
-            <img id="play" src="assests/svgs/play.svg" alt="" />
             <img
               class="invert"
-              id="pause"
-              src="assests/svgs/pause.svg"
+              id="prev"
+              src="assests/svgs/previous.svg"
               alt=""
             />
           </button>
           <button>
-            <img class="invert" src="assests/svgs/next.svg" alt="" />
+            <img id="play" src="assests/svgs/play.svg" alt="" />
+          </button>
+          <button>
+            <img class="invert" id="next" src="assests/svgs/next.svg" alt="" />
           </button>
           <img class="invert" src="assests/svgs/repeat.svg" alt="" />
         </div>
@@ -1203,8 +1203,8 @@
         <img class="invert" src="assests/svgs/control-queue.svg" alt="" />
         <img class="invert" src="assests/svgs/connect.svg" alt="" />
         <div class="audio-player">
-          <img class="invert" src="assests/svgs/sound.svg" alt="" />
-
+          <img class="invert vol" src="assests/svgs/sound.svg" alt="" />
+          <img class="invert" id="mute" src="assests/svgs/mute.svg" alt="" />
           <input
             type="range"
             orient="vertical"

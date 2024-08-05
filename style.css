@@ -119,6 +119,7 @@ button:hover {
   justify-content: start;
   gap: 15px;
   align-items: start;
+  overflow: hidden;
 }
 
 .library-top {
@@ -154,7 +155,7 @@ button:hover {
 
 .library-bottom {
   width: 99%;
-  height: 45%;
+  height: 65%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -179,6 +180,52 @@ button:hover {
 
 .library-bottom::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5); /* More visible on hover */
+}
+
+.playlists {
+  display: none;
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.songs>ul{
+  width: 100%;
+
+}
+
+.songs ul li {
+  list-style-type: decimal;
+  padding: 4px 10px;
+  margin: 4px 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.songs ul li img{
+  width: 25px;
+  height: 25px;
+}
+
+.songs ul li div{
+  width: 70%;
+}
+
+.songs ul li>div :last-child{
+  color: #b6b5b5;
 }
 
 .playlist {
@@ -215,20 +262,21 @@ button:hover {
 }
 
 footer {
-  margin-top: 20px;
+  height: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
 }
 
 .footer {
   display: flex;
+  flex-direction: row;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px 20px;
-  padding: 0px 95px 20px 20px;
+  padding: 2px 10px;
+  flex-wrap: wrap;
 }
 
 .footer > a {
@@ -240,7 +288,7 @@ footer {
   cursor: pointer;
 }
 
-.lang {
+/* .lang {
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -256,7 +304,7 @@ footer {
 .lang > img {
   height: 15px;
   width: 15px;
-}
+} */
 
 .nav {
   height: 10%;
@@ -645,6 +693,10 @@ footer > .upper {
   margin-right: 15px;
 }
 
+#mute {
+  display: none;
+}
+
 #volume-slider {
   width: 90px;
   height: 4px;
@@ -703,9 +755,6 @@ footer > .upper {
   height: 35px;
 }
 
-#pause {
-  display: none;
-}
 
 .playbar-seek {
   width: 100%;
